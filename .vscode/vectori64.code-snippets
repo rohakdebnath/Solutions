@@ -1,0 +1,10 @@
+{
+  "vectori64": {
+    "scope": "",
+    "prefix": "vi6",
+    "body": [
+      "vector<i64>"
+    ],
+    "description": ""
+  }
+}

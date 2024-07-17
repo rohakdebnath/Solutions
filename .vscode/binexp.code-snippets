@@ -1,0 +1,10 @@
+{
+  "binexp": {
+    "scope": "",
+    "prefix": "binexp",
+    "body": [
+      "const i64 MOD = 1e9 + 7;\ni64 exp(i64 base, i64 pow){\n    i64 res = 1;\n    while (pow){\n        if (pow & 1) res = res * base % MOD;\n        base = base * base % MOD;\n        pow /= 2;\n    }\n    return res;\n}"
+    ],
+    "description": ""
+  }
+}

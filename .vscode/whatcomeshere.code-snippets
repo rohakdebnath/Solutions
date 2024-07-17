@@ -1,0 +1,10 @@
+{
+  "whatcomeshere": {
+    "scope": "",
+    "prefix": "preidx",
+    "body": [
+      "vector<int> id (n); iota(id.begin(), id.end(), 0);\nsort(id.begin(), id.end(), [&] (int i, int j) {return a[i] < a[j];});"
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mi": {
+    "scope": "",
+    "prefix": "mi",
+    "body": [
+      "const int MOD = 1e9 + 7;  // Change as required\nconst int MAX = 1e7; // Maximum value of n required\n\nstruct mi {\n    int v;\n    explicit operator int() const { return v; }\n    mi() { v = 0; }\n    mi(long long _v) : v(_v % MOD) { v += (v < 0) * MOD; }\n};\n\nmi &operator+=(mi &a, mi b) {\n    if ((a.v += b.v) >= MOD) a.v -= MOD;\n    return a;\n}\n\nmi &operator-=(mi &a, mi b) {\n    if ((a.v -= b.v) < 0) a.v += MOD;\n    return a;\n}\n\nmi operator+(mi a, mi b) { return a += b; }\nmi operator-(mi a, mi b) { return a -= b; }\nmi operator*(mi a, mi b) { return mi((long long)a.v * b.v); }\nmi &operator*=(mi &a, mi b) { return a = a * b; }\n\nmi pow(mi a, long long p) {\n    mi result = 1;\n    while (p > 0) {\n        if (p & 1) result *= a;\n        a *= a;\n        p >>= 1;\n    }\n    return result;\n}\n\nmi inv(mi a) {\n    return pow(a, MOD - 2);\n}\nmi operator/(mi a, mi b) { return a * inv(b); }\n\nvector<mi> fact(MAX+1, 1);\n\nvoid precompute_factorials() {\n    for (int i = 2; i <= MAX; ++i)\n        fact[i] = fact[i-1] * i;\n}\n\nmi nCr(int n, int r) {\n    if (r < 0 || r > n) return 0;\n    return fact[n] * inv(fact[r] * fact[n - r]);\n}"
+    ],
+    "description": ""
+  }
+}

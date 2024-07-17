@@ -1,0 +1,10 @@
+{
+  "sortpairbysecondelement": {
+    "scope": "",
+    "prefix": "pairsortsecond",
+    "body": [
+      "[&] (auto i, auto j) {return i.second < j.second;}"
+    ],
+    "description": ""
+  }
+}

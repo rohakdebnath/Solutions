@@ -1,0 +1,10 @@
+{
+  "lowestfactorsieve": {
+    "scope": "",
+    "prefix": "lowestfactorsieve",
+    "body": [
+      "const int MX = 1000001;\nint lowestfactor[MX];\nvoid sieve(){\n    rep(i, 1, MX) lowestfactor[i] = i;\n    rep(i, 2, MX){\n        for (i64 j = 2 * i; j < MX; j += i){\n            if (lowestfactor[j] != j) continue;\n            lowestfactor[j] = i;\n        }\n    }\n}"
+    ],
+    "description": ""
+  }
+}

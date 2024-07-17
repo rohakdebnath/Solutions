@@ -1,0 +1,10 @@
+{
+  "sieveforprimes": {
+    "scope": "",
+    "prefix": "primesieve",
+    "body": [
+      "const int MX = 1000001;\nint primes[MX];\nvoid sieve(){\n    for (int i = 2; i < MX; ++i) {\n        if (!primes[i]) continue;\n        for (i64 j = 1LL * i * i; j < MX; j += i){\n            primes[j] = 0;\n        }\n    }\n}"
+    ],
+    "description": ""
+  }
+}

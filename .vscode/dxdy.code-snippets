@@ -1,0 +1,10 @@
+{
+  "dxdy": {
+    "scope": "",
+    "prefix": "dxdy",
+    "body": [
+      "int dx[] = {1, 0, -1, 0};\nint dy[] = {0, -1, 0, 1};"
+    ],
+    "description": ""
+  }
+}

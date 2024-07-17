@@ -1,0 +1,10 @@
+{
+  "removezeros": {
+    "scope": "",
+    "prefix": "remzeros",
+    "body": [
+      "f.erase(remove(f.begin(), f.end(), 0), f.end());"
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "allVariable": {
+      "scope": "cpp",  // You can specify the language or leave it empty to apply to all languages
+      "prefix": "all",
+      "body": [
+          "${1:container}.begin(), ${1:container}.end()"
+      ],
+      "description": "Converts a container to a range covering all elements."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "usaco": {
+    "scope": "",
+    "prefix": "usaco",
+    "body": [
+      "#include <bits/stdc++.h>\n\nusing namespace std;\nusing i64 = long long;\n\nvoid setIO(string name = \"\")\n{\n    if (!name.empty()) {\n        freopen((name + \".in\").c_str(), \"r\", stdin);\n        freopen((name + \".out\").c_str(), \"w\", stdout);\n    }\n}\n\nsigned main()\n{\n    ios::sync_with_stdio(false); cin.tie(nullptr);\n    //setIO(\"\");\n\n    return 0;\n}"
+    ],
+    "description": ""
+  }
+}

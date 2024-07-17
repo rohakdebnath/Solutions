@@ -1,0 +1,10 @@
+{
+  "interact": {
+    "scope": "",
+    "prefix": "interact",
+    "body": [
+      "int ask(int x, int y) {\n    std::cout << \"? \" << x << \" \" << y << std::endl;\n    int res;\n    std::cin >> res;\n    return res;\n}"
+    ],
+    "description": ""
+  }
+}

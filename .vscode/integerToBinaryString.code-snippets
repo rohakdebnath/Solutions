@@ -1,0 +1,10 @@
+{
+  "integerToBinaryString": {
+    "scope": "",
+    "prefix": "inttobinstr",
+    "body": [
+      "bitset<32> bin (n);\nstring s = bin.to_string();\ns = s.substr(s.find_first_of('1'));"
+    ],
+    "description": ""
+  }
+}

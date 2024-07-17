@@ -1,0 +1,10 @@
+{
+  "rangeinvmodforPRIME": {
+    "scope": "",
+    "prefix": "rangeinvmodforPRIME",
+    "body": [
+      "int inv [MOD];\nvoid rangeinv(int m = MOD){\n    inv[1] = 1;\n    for (int i = 2; i < m; i++) { inv[i] = m - m / i * inv[m % i] % m; }\n}"
+    ],
+    "description": ""
+  }
+}

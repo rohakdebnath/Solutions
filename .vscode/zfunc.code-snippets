@@ -1,0 +1,10 @@
+{
+  "zfunc": {
+    "scope": "",
+    "prefix": "zfunc",
+    "body": [
+      "vector<int> zfunc(string& s){\n    int n = s.size();\n    vector<int> z (n);\n    z[0] = n;\n    int l = 0, r = 0;\n    for (int i = 1; i < n;) {\n        if (i < r){\n            z[i] = min<int>(r - i, z[i - l]);\n        }\n        while(z[i] + i < n and s[z[i]] == s[i + z[i]]) ++z[i];\n        if (i + z[i] > r){\n            l = i;\n            r = i + z[i];\n        }\n    }\n    return z;\n}"
+    ],
+    "description": ""
+  }
+}

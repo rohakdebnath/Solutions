@@ -1,0 +1,10 @@
+{
+  "vectorstring": {
+    "scope": "",
+    "prefix": "vs",
+    "body": [
+      "vector<string> "
+    ],
+    "description": ""
+  }
+}

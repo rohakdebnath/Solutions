@@ -1,0 +1,10 @@
+{
+  "primefactorize": {
+    "scope": "",
+    "prefix": "primefactorize",
+    "body": [
+      "map<int, int> factors;\nfor (int i = 2; i * i <= Q; ++i){\n    while (Q % i == 0){\n        Q /= i;\n        ++factors[i];\n    }\n}"
+    ],
+    "description": ""
+  }
+}

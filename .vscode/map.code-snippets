@@ -1,0 +1,10 @@
+{
+  "map": {
+    "scope": "",
+    "prefix": "mp",
+    "body": [
+      "map<int, int>"
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "euclidlemmamod": {
+    "scope": "",
+    "prefix": "invforPRIME",
+    "body": [
+      "int inv(int x) {\n\tif (x <= 1) { return x; }\n\treturn MOD - MOD / x * inv(MOD % x) % MOD;\n}"
+    ],
+    "description": ""
+  }
+}

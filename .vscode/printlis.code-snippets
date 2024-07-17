@@ -1,0 +1,10 @@
+{
+  "printlis": {
+    "scope": "",
+    "prefix": "printlis",
+    "body": [
+      "vector<int> dp (n + 1, 1e9); dp[0] = -1e9;\nvector<int> d (n, -1), p (n);\nfor(int i = 0; i < n; ++i) {\n    int l = lower_bound(dp.begin(), dp.end(), a[i]) - dp.begin();\n    dp[l] = a[i];\n    d[l] = i;\n    p[i] = d[l - 1];\n}\nint ans = n; while (dp[ans] == 1e9) --ans;\nint b = d[ans];\nvector<int> s;\nwhile (b != -1) {\n    s.push_back(a[b]);\n    b = p[b];\n}\nreverse(s.begin(), s.end());\ncout << ans << \"\\n-\\n\";\nfor (int i = 0; i < ans; ++i) {\n    cout << s[i] << '\\n';\n}"
+    ],
+    "description": ""
+  }
+}

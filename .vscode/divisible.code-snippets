@@ -1,0 +1,10 @@
+{
+  "divisible": {
+    "scope": "",
+    "prefix": "divisible",
+    "body": [
+      "bool check(string &n, long long k) {\n    long long rem = 0;\n    for (auto i : n)\n        rem = ((rem * 10) + i - '0') % k;\n    return rem == 0;\n}"
+    ],
+    "description": ""
+  }
+}

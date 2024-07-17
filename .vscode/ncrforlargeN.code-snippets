@@ -1,0 +1,10 @@
+{
+  "ncrforlargeN": {
+    "scope": "",
+    "prefix": "ncrforlargeN",
+    "body": [
+      "i64 nCr(i64 n, i64 k) {\n    if (k > n) return 0;\n    if (k > n - k) k = n - k;\n    i64 numerator = 1;\n    i64 denominator = 1;\n    for (i64 i = 0; i < k; ++i) {\n        numerator = (numerator * (n - i)) % MOD;\n        denominator = (denominator * (i + 1)) % MOD;\n    }\n    return (numerator * exp(denominator, MOD - 2)) % MOD;\n}"
+    ],
+    "description": ""
+  }
+}

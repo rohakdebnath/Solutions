@@ -1,0 +1,10 @@
+{
+  "nChooser": {
+    "scope": "",
+    "prefix": "ncr",
+    "body": [
+      "int ncr(int n, int r){\n    return fact[n] * inv[n - r] % MOD * inv[r] % MOD;\n}"
+    ],
+    "description": ""
+  }
+}

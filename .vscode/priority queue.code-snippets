@@ -1,0 +1,10 @@
+{
+  "priority queue": {
+    "scope": "",
+    "prefix": "pq",
+    "body": [
+      "priority_queue<int> pq;"
+    ],
+    "description": ""
+  }
+}

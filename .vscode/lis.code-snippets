@@ -1,0 +1,10 @@
+{
+  "lis": {
+    "scope": "",
+    "prefix": "lis",
+    "body": [
+      "vector<int> dp (n + 1, 1e9); dp[0] = -1e9;\nfor(int i = 0; i < n; ++i) {\n    int l = lower_bound(dp.begin(), dp.end(), a[i]) - dp.begin();\n    dp[l] = a[i];\n}\nint ans = 0;\nfor (int i = 0; i <= n; ++i) {\n    if (dp[i] < 1e9) ans = i;\n}"
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "modulararithmatictemplate": {
+    "scope": "",
+    "prefix": "modtemp",
+    "body": [
+      "/**\n * Description: Modular arithmetic. Assumes \\$MOD\\$ is prime.\n * Source: KACTL\n * Verification: https://open.kattis.com/problems/modulararithmetic\n * Usage: mi a = MOD+5; inv(a); // 400000003\n */\n\ntemplate<int MOD, int RT> struct mint {\n\tstatic const int mod = MOD;\n\tstatic constexpr mint rt() { return RT; } // primitive root\n \tint v; \n \texplicit operator int() const { return v; } \n\tmint():v(0) {}\n\tmint(i64 _v):v(int(_v%MOD)) { v += (v<0)*MOD; }\n\tmint& operator+=(mint o) { \n\t\tif ((v += o.v) >= MOD) v -= MOD; \n\t\treturn *this; }\n\tmint& operator-=(mint o) { \n\t\tif ((v -= o.v) < 0) v += MOD; \n\t\treturn *this; }\n\tmint& operator*=(mint o) { \n\t\tv = int((i64)v*o.v%MOD); return *this; }\n\tfriend mint pow(mint a, i64 p) { assert(p >= 0);\n\t\treturn p==0?1:pow(a*a,p/2)*(p&1?a:1); }\n\tfriend mint inv(mint a) { assert(a.v != 0); return pow(a,MOD-2); }\n\tfriend mint operator+(mint a, mint b) { return a += b; }\n\tfriend mint operator-(mint a, mint b) { return a -= b; }\n\tfriend mint operator*(mint a, mint b) { return a *= b; }\n};\nusing mi = mint<(int)1e9+7, 5>;\nusing vmi = vector<mi>;"
+    ],
+    "description": ""
+  }
+}

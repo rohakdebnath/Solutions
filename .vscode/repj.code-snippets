@@ -1,0 +1,12 @@
+{
+  "forLoop": {
+      "scope": "cpp",  // Set this to any specific language identifiers as needed, or leave as "cpp" for C++
+      "prefix": "repj",
+      "body": [
+          "for (int j = 0; j < ${1:n}; ++j) {",
+          "\t$0",
+          "}"
+      ],
+      "description": "Creates a for loop with a customizable limit."
+  }
+}

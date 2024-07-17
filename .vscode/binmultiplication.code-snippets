@@ -1,0 +1,10 @@
+{
+  "binmultiplication": {
+    "scope": "",
+    "prefix": "binmult",
+    "body": [
+      "const i64 MOD = 1e9 + 7;\ni64 mult(i64 a, i64 b){\n    i64 res = 0;\n    a %= MOD;\n    while (b){\n        if (b & 1LL) res = (res + a) % MOD;\n        a = 2LL * a % MOD;\n        b >>= 1LL;\n    }\n    return res;\n}"
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "combinatorial": {
+    "scope": "",
+    "prefix": "combinatorial",
+    "body": [
+      "#define MX 1000000\nconst long long MOD = 1e9 + 7;\n\nlong long fact[1000001];\nlong long inv[1000001];\n\nvoid factorial(){\n    fact[0] = 1;\n    rep(i, 1, MX + 1){\n        fact[i] = fact[i - 1] * i % MOD;\n    }\n    return;\n}\nlong long binexp(long long base, long long pow){\n    long long res = 1;\n    base %= MOD;\n    while (pow){\n        if (pow & 1) res = res * base % MOD;\n        pow /= 2;\n        base = base * base % MOD;\n    }\n    return res;\n}\nvoid inverse(){\n    inv[MX] = binexp(fact[MX], MOD - 2);\n    per(i, MX, 1) inv[i - 1] = inv[i] * i % MOD;\n}"
+    ],
+    "description": ""
+  }
+}

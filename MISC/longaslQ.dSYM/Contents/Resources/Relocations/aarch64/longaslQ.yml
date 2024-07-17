@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/rohakdebnath/Desktop/Cpp /MISC/longaslQ'
+relocations:
+  - { offsetInCU: 0x1E, offset: 0x1E, size: 0x8, addend: 0x0, symName: __Z9makeQNodeP8treenode, symObjAddr: 0x0, symBinAddr: 0x1000039EC, symSize: 0x40 }
+  - { offsetInCU: 0xCE, offset: 0xCE, size: 0x8, addend: 0x0, symName: __Z9makeQNodeP8treenode, symObjAddr: 0x0, symBinAddr: 0x1000039EC, symSize: 0x40 }
+  - { offsetInCU: 0x108, offset: 0x108, size: 0x8, addend: 0x0, symName: __Z7enqueueP5qnodeP8treenode, symObjAddr: 0x40, symBinAddr: 0x100003A2C, symSize: 0x54 }
+  - { offsetInCU: 0x150, offset: 0x150, size: 0x8, addend: 0x0, symName: __Z7dequeuePP5qnode, symObjAddr: 0x94, symBinAddr: 0x100003A80, symSize: 0x60 }
+  - { offsetInCU: 0x18A, offset: 0x18A, size: 0x8, addend: 0x0, symName: __Z4swapPiS_, symObjAddr: 0xF4, symBinAddr: 0x100003AE0, symSize: 0x3C }
+  - { offsetInCU: 0x1CE, offset: 0x1CE, size: 0x8, addend: 0x0, symName: __Z12maketreenodeii, symObjAddr: 0x130, symBinAddr: 0x100003B1C, symSize: 0x80 }
+  - { offsetInCU: 0x216, offset: 0x216, size: 0x8, addend: 0x0, symName: __Z8maketreev, symObjAddr: 0x1B0, symBinAddr: 0x100003B9C, symSize: 0x20C }
+  - { offsetInCU: 0x2DC, offset: 0x2DC, size: 0x8, addend: 0x0, symName: __Z7findminP8treenode, symObjAddr: 0x3BC, symBinAddr: 0x100003DA8, symSize: 0x164 }
+  - { offsetInCU: 0x316, offset: 0x316, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x520, symBinAddr: 0x100003F0C, symSize: 0x58 }
+...

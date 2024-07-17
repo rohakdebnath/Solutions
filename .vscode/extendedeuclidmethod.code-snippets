@@ -1,0 +1,11 @@
+
+{
+  "extendedeuclidmethod": {
+    "scope": "",
+    "prefix": "exteuclid",
+    "body": [
+      "int gcd(int a, int b, int& x, int& y){\n    if (b == 0){\n        x = 1;\n        y = 0;\n        return a;\n    }\n    int x1, y1;\n    int d = gcd(b, a % b, x1, y1);\n    x = y1;\n    y = x1 - y1 * (a/b);\n    return d;\n}"
+    ],
+    "description": ""
+  }
+}

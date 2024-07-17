@@ -1,0 +1,10 @@
+{
+  "2sat": {
+    "scope": "",
+    "prefix": "2sat",
+    "body": [
+      "struct TwoSat {\n    int n;\n    vector<vector<int>> e;\n    vector<bool> ans;\n    TwoSat(int N) : n(N), e(2 * N), ans(N) {}\n    void addClause(int u, bool f, int v, bool g) { // (u == f) or (v == g) (f, g = 1 means normal, 0 means negation must be true)\n        e[2 * u + !f].push_back(2 * v + g);\n        e[2 * v + !g].push_back(2 * u + f);\n    }\n    bool satisfiable() {\n        vector<int> id(2 * n, -1), dfn(2 * n, -1), low(2 * n, -1);\n        vector<int> stk;\n        int now = 0, cnt = 0;\n        function<void(int)> tarjan = [&](int u) {\n            stk.push_back(u);\n            dfn[u] = low[u] = now++;\n            for (auto v : e[u]) {\n                if (dfn[v] == -1) {\n                    tarjan(v);\n                    low[u] = min(low[u], low[v]);\n                } else if (id[v] == -1) {\n                    low[u] = min(low[u], dfn[v]);\n                }\n            }\n            if (dfn[u] == low[u]) {\n                int v;\n                do {\n                    v = stk.back();\n                    stk.pop_back();\n                    id[v] = cnt;\n                } while (v != u);\n                ++cnt;\n            }\n        };\n        for (int i = 0; i < 2 * n; ++i) if (dfn[i] == -1) tarjan(i);\n        for (int i = 0; i < n; ++i) {\n            if (id[2 * i] == id[2 * i + 1]) return false;\n            ans[i] = id[2 * i] > id[2 * i + 1];\n        }\n        return true;\n    }\n    vector<bool> answer() { return ans; } //returns a boolean vector as a possible solution for the 2 sat, notice that not satisfiable means 0 all, but 0 all dont mean not satisfiable\n};"
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "MOD": {
+    "scope": "",
+    "prefix": "MOD1e9",
+    "body": [
+      "const int MOD = 1e9 + 7;"
+    ],
+    "description": ""
+  }
+}

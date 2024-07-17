@@ -1,0 +1,10 @@
+{
+  "whatgoeswhere": {
+    "scope": "",
+    "prefix": "postidx",
+    "body": [
+      "vector<int> id (n); iota(id.begin(), id.end(), 0);\nsort(id.begin(), id.end(), [&] (int i, int j) {return a[i] < a[j];});\nvector<int> pid (n);\nfor (int i = 0; i < n; ++i) pid[id[i]] = i;"
+],
+"description": ""
+  }
+}

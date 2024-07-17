@@ -1,0 +1,10 @@
+{
+  "lcs": {
+    "scope": "",
+    "prefix": "lcs",
+    "body": [
+      "int l = s.size(), m = t.size();\nvector<vector<int>> dp (l + 1, vector<int> (m + 1));\nfor (int i = 0; i < l; ++i) {\n    for (int j = 0; j < m; ++j) {\n        if (s[i] == t[j]) dp[i + 1][j + 1] = 1 + dp[i][j];\n        else dp[i + 1][j + 1] = max(dp[i + 1][j], dp[i][j + 1]);\n    }\n}"
+    ],
+    "description": ""
+  }
+}

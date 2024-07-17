@@ -1,0 +1,10 @@
+{
+  "derangement": {
+    "scope": "",
+    "prefix": "derangement",
+    "body": [
+      "void derange(){\n    der[0] = 1, der[1] = 0;\n    rep(i, 2, MX + 1){\n        der[i] = (i - 1) * (der[i - 1] + der[i - 2]) % MOD;\n    }\n}"
+    ],
+    "description": ""
+  }
+}

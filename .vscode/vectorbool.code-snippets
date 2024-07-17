@@ -1,0 +1,10 @@
+{
+  "vectorbool": {
+    "scope": "",
+    "prefix": "vb",
+    "body": [
+      "vector<bool>"
+    ],
+    "description": ""
+  }
+}

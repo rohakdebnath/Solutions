@@ -1,0 +1,10 @@
+{
+  "uniqize": {
+    "scope": "",
+    "prefix": "uniqize",
+    "body": [
+      "a.erase(unique(a.begin(), a.end()), a.end());"
+    ],
+    "description": ""
+  }
+}
