@@ -101,7 +101,11 @@
         "valarray": "cpp",
         "ranges": "cpp",
         "filesystem": "cpp",
-        "source_location": "cpp"
+        "source_location": "cpp",
+        "functional": "cpp"
     },
-    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-11"
+    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-16",
+    "code-runner.executorMap": {
+        "cpp": "cd \"$dirWithoutTrailingSlash\" && /opt/homebrew/bin/g++-16 -std=c++23 \"$fileName\" -o \"$fileNameWithoutExt\" && \"./$fileNameWithoutExt\""
+    }
 }

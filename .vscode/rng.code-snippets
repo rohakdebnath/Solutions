@@ -1,0 +1,10 @@
+{
+  "rng": {
+    "scope": "",
+    "prefix": "rng",
+    "body": [
+      "mt19937 rng((i64) std::chrono::steady_clock::now().time_since_epoch().count());\ni64 rnd(i64 x, i64 y) {\n    return uniform_int_distribution<i64>(x, y)(rng);\n}"
+    ],
+    "description": ""
+  }
+}

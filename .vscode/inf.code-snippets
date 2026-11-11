@@ -1,0 +1,10 @@
+{
+  "inf": {
+    "scope": "",
+    "prefix": "inf",
+    "body": [
+      "const int inf = 1e9;"
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "matrixexpo": {
+    "scope": "",
+    "prefix": "matrixexpo",
+    "body": [
+      "const int mod = 1e9 + 7;\ntemplate<typename T>\nstruct Matrix {\n    int size;\n    vector<vector<T>> mat;\n\n    Matrix(int k) : size(k), mat(k, vector<T>(k, 0)) {}\n\n    static Matrix<T> identity(int k) {\n        Matrix<T> I(k);\n        for(int i = 0; i < k; ++i) {\n            I.mat[i][i] = 1;\n        }\n        return I;\n    }\n\n    Matrix<T> operator*(const Matrix<T>& other) const {\n        if(size != other.size) {\n            throw invalid_argument(\"Matrix sizes do not match for multiplication.\");\n        }\n        Matrix<T> result(size);\n        for(int i = 0; i < size; ++i) {\n            for(int k = 0; k < size; ++k) {\n                if(mat[i][k] == 0) continue;\n                for(int j = 0; j < size; ++j) {\n                    if constexpr (is_integral<T>::value) {\n                        result.mat[i][j] = (result.mat[i][j] + mat[i][k] * other.mat[k][j]) % mod;\n                    } else {\n                        result.mat[i][j] += mat[i][k] * other.mat[k][j];\n                    }\n                }\n            }\n        }\n        return result;\n    }\n\n    void print() const {\n        for(int i = 0; i < size; ++i) {\n            for(int j = 0; j < size; ++j) {\n                if constexpr (is_floating_point<T>::value) {\n                    cout << fixed << setprecision(6) << mat[i][j] << ' ';\n                } else {\n                    cout << mat[i][j] << ' ';\n                }\n            }\n            cout << '\\n';\n        }\n    }\n};\n\ntemplate<typename T>\nMatrix<T> power(Matrix<T> base, i64 exponent) {\n    Matrix<T> result = Matrix<T>::identity(base.size);\n    while(exponent > 0) {\n        if(exponent & 1) {\n            result = result * base;\n        }\n        base = base * base;\n        exponent >>= 1;\n    }\n    return result;\n}"
+    ],
+    "description": ""
+  }
+}

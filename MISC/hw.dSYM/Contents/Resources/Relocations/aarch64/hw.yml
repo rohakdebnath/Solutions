@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/rohakdebnath/Desktop/Cpp /MISC/hw'
+relocations:
+  - { offsetInCU: 0x1E, offset: 0x1E, size: 0x8, addend: 0x0, symName: __Z3gcdiiPiS_, symObjAddr: 0x0, symBinAddr: 0x100003C80, symSize: 0xC4 }
+  - { offsetInCU: 0x39, offset: 0x39, size: 0x8, addend: 0x0, symName: __Z3gcdiiPiS_, symObjAddr: 0x0, symBinAddr: 0x100003C80, symSize: 0xC4 }
+  - { offsetInCU: 0xB9, offset: 0xB9, size: 0x8, addend: 0x0, symName: __Z3expiii, symObjAddr: 0xC4, symBinAddr: 0x100003D44, symSize: 0xC0 }
+  - { offsetInCU: 0x10F, offset: 0x10F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x184, symBinAddr: 0x100003E04, symSize: 0x164 }
+...

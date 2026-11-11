@@ -1,0 +1,10 @@
+{
+  "prefixfunc": {
+    "scope": "",
+    "prefix": "preficfunc",
+    "body": [
+      "vector<int> pi (n, 0);\n\nfor (int i = 1; i < n; ++i) {\n    int j = pi[i - 1];\n    while (j > 0 and s[i] != s[j]) {\n        j = pi[j - 1];\n    }\n    if (s[i] == s[j]) ++j;\n    pi[i] = j;\n}"
+    ],
+    "description": ""
+  }
+}

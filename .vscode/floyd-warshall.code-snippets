@@ -1,0 +1,10 @@
+{
+  "floyd-warshall": {
+    "scope": "",
+    "prefix": "flowa",
+    "body": [
+      "for (int k = 0; k < n; k++){\n    for (int i = 0; i < n; i++){\n        for (int j = 0; j < n; j++){\n            dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j]);\n        }\n    }\n}"
+    ],
+    "description": ""
+  }
+}

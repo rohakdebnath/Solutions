@@ -1,0 +1,10 @@
+{
+  "adjlist": {
+    "scope": "",
+    "prefix": "adj",
+    "body": [
+      "vector<vector<int>> adj (n);\nfor (int i = 0; i < n - 1; ++i) {\n    int a, b; cin >> a >> b;\n    --a, --b;\n    adj[a].push_back(b);\n    adj[b].push_back(a);\n}"
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "lcp": {
+    "scope": "",
+    "prefix": "lcp",
+    "body": [
+      "vector<int> lcp(string s) {\n    s += \"\\$\";\n    int n = s.size();\n    vector<int> suf = sufar(s);\n    vector<int> pos (n);\n    for (int i = 0; i < n; ++i) pos[suf[i]] = i;\n    vector<int> lcp (n - 1);\n    int k = 0;\n    for (int i = 0; i < n - 1; ++i) {\n        int j = suf[pos[i] - 1];\n        while (s[i + k] == s[j + k]) ++k;\n        lcp[pos[i] - 1] = k;\n        k -= (k > 0);\n    }\n\n    return lcp;\n}"
+    ],
+    "description": ""
+  }
+}

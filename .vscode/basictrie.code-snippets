@@ -1,0 +1,10 @@
+{
+  "basictrie": {
+    "scope": "",
+    "prefix": "trie",
+    "body": [
+      "class Trie {\n    public:\n    struct TrieNode {\n        map<char, int> children;\n        int sum;\n        TrieNode() : sum(0) {}\n    };\n\n    vector<TrieNode> trie;\n    int cnt;\n\n    Trie() {\n        trie.emplace_back(); \n        cnt = 1;\n    }\n\n    void add(const string& s, int t = 1) {\n        int p = 0;\n        trie[p].sum += t;\n        for (char c : s) {\n            if (trie[p].children.find(c) == trie[p].children.end()) {\n                trie[p].children[c] = cnt++;\n                trie.emplace_back();\n            }\n            p = trie[p].children[c];\n            trie[p].sum += t;\n        }\n    }\n\n    void insert(const string& s) {\n        add(s, 1);\n    }\n\n    void erase(const string& s) {\n        add(s, -1);\n    }\n\n    bool search(const string& s) {\n        int p = 0;\n        for (char c : s) {\n            if (trie[p].children.find(c) == trie[p].children.end()) {\n                return false;  \n            }\n            p = trie[p].children[c];\n        }\n        return trie[p].sum > 0; \n    }\n\n    int countPrefix(const string& prefix) {\n        int p = 0; \n        for (char c : prefix) {\n            if (trie[p].children.find(c) == trie[p].children.end()) {\n                return 0;\n            }\n            p = trie[p].children[c];\n        }\n        return trie[p].sum;\n    }\n}; "
+    ],
+    "description": ""
+  }
+}

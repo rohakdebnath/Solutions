@@ -1,0 +1,10 @@
+{
+  "chmin": {
+    "scope": "",
+    "prefix": "chmin",
+    "body": [
+      "void chmin(i64& a, i64 b) {\n    a = min(a, b);\n}"
+    ],
+    "description": ""
+  }
+}

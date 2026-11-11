@@ -1,0 +1,10 @@
+{
+  "vigrid": {
+    "scope": "",
+    "prefix": "vigrid",
+    "body": [
+      "int n, m; cin >> n >> m;\nvector<vector<int>> g (n, vector<int> (m));\nfor (int i = 0; i < n; ++i) {\n    for (int j = 0; j < m; ++j) {\n        cin >> g[i][j];\n    }\n}"
+    ],
+    "description": ""
+  }
+}

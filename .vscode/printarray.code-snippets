@@ -1,0 +1,10 @@
+{
+  "printarray": {
+    "scope": "",
+    "prefix": "printar",
+    "body": [
+      "for (int i = 0; i < n; ++i) {\n    cout << a[i] << \" \\n\"[i == n - 1];\n}"
+    ],
+    "description": ""
+  }
+}

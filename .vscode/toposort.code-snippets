@@ -1,0 +1,10 @@
+{
+  "toposort": {
+    "scope": "",
+    "prefix": "topo",
+    "body": [
+      "vector<vector<int>> adj(n);\nfor (int i = 0; i < c; i++) {\n    int a, b; cin >> a >> b;\n    adj[a].push_back(b);\n}\n\nvector<int> in(n);\nfor (const vector<int> &nodes : adj) {\n    for (auto u: nodes) in[u]++;\n}\n\nqueue<int> queue;\nfor (int i = 0; i < n; i++) {\n    if (in[i] == 0) queue.push(i);\n}\nvector<int> topo;\nwhile (!queue.empty()) {\n    int curr = queue.front();\n    queue.pop();\n    topo.push_back(curr);\n    for (auto next: adj[curr]) {\n        if (--in[next] == 0) queue.push(next);\n    }\n}"
+    ],
+    "description": ""
+  }
+}

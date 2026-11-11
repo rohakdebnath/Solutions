@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/rohakdebnath/Desktop/Cpp /MISC/oops'
+relocations:
+  - { offsetInCU: 0x1E, offset: 0x1E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D58, symSize: 0x2C }
+  - { offsetInCU: 0x31, offset: 0x31, size: 0x8, addend: 0x0, symName: __ZN4Hero14timeToCompleteE, symObjAddr: 0x1D8, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x4BBC, offset: 0x4BBC, size: 0x8, addend: 0x0, symName: __ZNSt3__14endlB7v160006IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_, symObjAddr: 0x88, symBinAddr: 0x100003DE0, symSize: 0x58 }
+  - { offsetInCU: 0x4BFC, offset: 0x4BFC, size: 0x8, addend: 0x0, symName: __ZNSt3__19use_facetB7v160006INS_5ctypeIcEEEERKT_RKNS_6localeE, symObjAddr: 0x164, symBinAddr: 0x100003EBC, symSize: 0x2C }
+  - { offsetInCU: 0x7917, offset: 0x7917, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D58, symSize: 0x2C }
+  - { offsetInCU: 0x7930, offset: 0x7930, size: 0x8, addend: 0x0, symName: __ZN4Hero6randomEv, symObjAddr: 0x2C, symBinAddr: 0x100003D84, symSize: 0x30 }
+  - { offsetInCU: 0x79E6, offset: 0x79E6, size: 0x8, addend: 0x0, symName: __ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB7v160006EPFRS3_S4_E, symObjAddr: 0x5C, symBinAddr: 0x100003DB4, symSize: 0x2C }
+  - { offsetInCU: 0x7A18, offset: 0x7A18, size: 0x8, addend: 0x0, symName: __ZNKSt3__19basic_iosIcNS_11char_traitsIcEEE5widenB7v160006Ec, symObjAddr: 0xE0, symBinAddr: 0x100003E38, symSize: 0x84 }
+  - { offsetInCU: 0x7A84, offset: 0x7A84, size: 0x8, addend: 0x0, symName: __ZNKSt3__15ctypeIcE5widenB7v160006Ec, symObjAddr: 0x190, symBinAddr: 0x100003EE8, symSize: 0x38 }
+...

@@ -14,8 +14,6 @@ int main()
 {
     UNSYNC
     string s; cin >> s;
-    int l = distance(s.begin(), find(all(s), 'A'));
-    int r = distance(find(s.rbegin(), s.rend(), 'Z'), s.rend()) - 1;
-    cout << r - l + 1 << '\n';
+    cout << distance(find(s.rbegin(), s.rend(), 'Z'), s.rend()) - distance(s.begin(), find(all(s), 'A')) << '\n';
     return 0;
 }

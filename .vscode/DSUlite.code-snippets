@@ -1,0 +1,10 @@
+{
+  "DSUlite": {
+    "scope": "",
+    "prefix": "DSUlite",
+    "body": [
+      "template <typename T = int>\nclass DSU {\nprivate:\n    vector<T> parent;\n    vector<int> s;\n\npublic:\n    DSU(T n) : parent(n), s(n, 1) {\n        iota(parent.begin(), parent.end(), 0);\n    }\n\n    T find(T x) {\n        while (x != parent[x]) {\n            x = parent[x] = parent[parent[x]];\n        }\n        return x;\n    }\n\n    bool merge(T x_, T y_) {\n        T x = find(x_);\n        T y = find(y_);\n\n        if (x == y) return false; \n\n        if (s[x] < s[y]) {\n            parent[x] = y;\n            s[y] += s[x];\n        } else {\n            parent[y] = x;\n            s[x] += s[y];\n        };\n        return true;\n    }\n\n    bool connected(T x, T y) {\n        return find(x) == find(y);\n    }\n\n    int size (int x) {\n        return s[find(x)];\n    }\n};"
+    ],
+    "description": ""
+  }
+}

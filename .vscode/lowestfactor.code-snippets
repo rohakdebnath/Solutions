@@ -1,0 +1,10 @@
+{
+  "lowestfactor": {
+    "scope": "",
+    "prefix": "lowestfactor",
+    "body": [
+      "for (int i = 1; i <= inf; ++i) lowestfactor[i] = i;\nfor (int i = 2; i <= inf; ++i) {\n    for (int j = 2 * i; j <= inf; j += i) {\n        if (lowestfactor[j] != j) continue;\n        lowestfactor[j] = i;\n    }\n}"
+    ],
+    "description": ""
+  }
+}

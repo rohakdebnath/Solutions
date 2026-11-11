@@ -1,0 +1,10 @@
+{
+  "apsp": {
+    "scope": "",
+    "prefix": "apsp",
+    "body": [
+      "for (int k = 0; k < n; ++k) {\n    for (int i = 0; i < n; ++i) {\n        for (int j = 0; j < n; ++j) {\n            if (d[i][k] < inf and d[k][j] < inf)\n                d[i][j] = min(d[i][j], d[i][k] + d[k][j]); \n        }\n    }\n}"
+    ],
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "leet": {
+    "scope": "",
+    "prefix": "leet",
+    "body": [
+      "#include <bits/stdc++.h>\n\nusing namespace std;\nusing i64 = long long;\n\n\n\nsigned main()\n{\n    ios::sync_with_stdio(false); cin.tie(nullptr);\n    return 0;\n}\n"
+    ],
+    "description": ""
+  }
+}

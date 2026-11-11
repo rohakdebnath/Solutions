@@ -1,0 +1,10 @@
+{
+  "append": {
+    "scope": "",
+    "prefix": "appendvec",
+    "body": [
+      "x.insert(x.end(), y.begin(), y.end());"
+    ],
+    "description": ""
+  }
+}

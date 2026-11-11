@@ -1,0 +1,10 @@
+{
+  "rangeand": {
+    "scope": "",
+    "prefix": "rangeand",
+    "body": [
+      "int bitwiseand(int a, int b){\n    if (a == b) return a;\n    int final = 0;\n    while (a != b) {\n        ++final;\n        a >>= 1;\n        b >>= 1;\n    }\n    return (a * (1 << final));\n}"
+    ],
+    "description": ""
+  }
+}

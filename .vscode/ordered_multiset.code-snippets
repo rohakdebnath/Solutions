@@ -1,0 +1,10 @@
+{
+  "ordered_multiset": {
+    "scope": "",
+    "prefix": "o_multiset",
+    "body": [
+      "#include <ext/pb_ds/assoc_container.hpp>\n#include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;//for deleting an element, instead of m.erase(m.find(key)) or m.erase(key) use m.erase(m.upper_bound(key)), (using less equal is very risky)\ntemplate<class T> using o_multiset =tree<T, null_type, less_equal<T>, rb_tree_tag,tree_order_statistics_node_update>;"
+    ],
+    "description": ""
+  }
+}

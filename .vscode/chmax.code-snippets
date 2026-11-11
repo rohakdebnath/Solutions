@@ -1,0 +1,10 @@
+{
+  "chmax": {
+    "scope": "",
+    "prefix": "chmax",
+    "body": [
+      "void chmax(i64& a, i64 b) {\n    a = max(a, b);\n}"
+    ],
+    "description": ""
+  }
+}

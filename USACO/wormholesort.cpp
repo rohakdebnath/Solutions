@@ -44,7 +44,7 @@ void dfs (int n){
 int main()
 {
     UNSYNC
-    // setIO("wormsort");
+    setIO("wormsort");
     int N, M; cin >> N >> M;
     adj.resize(N);
     VI p (N); rep(i, 0, N) cin >> p[i], --p[i];
@@ -100,11 +100,6 @@ int main()
         } else {
             r = m;
         }
-
-        vector<int> id (N); iota(all(id), 0);
-        sort(all(id), [&] (int i, int j) {return A[i] < A[j];});
-        vector<int> pid (N);
-        rep(i, 0, N) pid[id[i]] = i;
     }  
     cout << wormholes[r].weight << '\n';
     return 0;

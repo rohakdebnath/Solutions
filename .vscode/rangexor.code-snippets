@@ -1,0 +1,10 @@
+{
+  "rangexor": {
+    "scope": "",
+    "prefix": "rangexor",
+    "body": [
+      "i64 rangexor(i64 m) {\n    if(m < 0) return 0;\n    if(m % 4 == 0) return m;\n    if(m % 4 == 1) return 1;\n    if(m % 4 == 2) return m + 1;\n    return 0;\n}"
+    ],
+    "description": ""
+  }
+}
